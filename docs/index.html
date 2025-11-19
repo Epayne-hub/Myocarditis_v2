@@ -281,7 +281,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -292,8 +292,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -306,9 +306,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 1
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Myocarditis_v2/</code> <span
@@ -331,36 +331,33 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2treece15efc255c6c5710d37984220cef2355ebe3ed1targetblankce15efca">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2treebae8e4cbab4354177364272b3441ea207c33ab9ftargetblankbae8e4ca">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/ce15efc255c6c5710d37984220cef2355ebe3ed1" target="_blank">ce15efc</a>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/bae8e4cbab4354177364272b3441ea207c33ab9f" target="_blank">bae8e4c</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2treece15efc255c6c5710d37984220cef2355ebe3ed1targetblankce15efca"
+id="strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2treebae8e4cbab4354177364272b3441ea207c33ab9ftargetblankbae8e4ca"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -370,7 +367,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/ce15efc255c6c5710d37984220cef2355ebe3ed1" target="_blank">ce15efc</a>.
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/bae8e4cbab4354177364272b3441ea207c33ab9f" target="_blank">bae8e4c</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -387,10 +384,9 @@ were generated:
 Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    R/
-    Ignored:    analysis/site_libs/
 
 Unstaged changes:
-    Modified:   analysis/index.Rmd
+    Modified:   analysis/Immpath_EMB_BMP_receptors.rmd
 
 </code></pre>
 <p>
@@ -434,6 +430,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/bae8e4cbab4354177364272b3441ea207c33ab9f/analysis/index.Rmd" target="_blank">bae8e4c</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+<td>
+changes
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Epayne-hub/Myocarditis_v2/bae8e4cbab4354177364272b3441ea207c33ab9f/docs/index.html" target="_blank">bae8e4c</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+<td>
+changes
+</td>
+</tr>
 <tr>
 <td>
 html
