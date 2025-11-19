@@ -513,15 +513,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2tree018c9d0e7c19459b1464c1a92cafb6f9081b3364targetblank018c9d0a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2tree537eb864d84cd637428c557ae09b9fe02e6aec8ftargetblank537eb86a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/018c9d0e7c19459b1464c1a92cafb6f9081b3364" target="_blank">018c9d0</a>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/537eb864d84cd637428c557ae09b9fe02e6aec8f" target="_blank">537eb86</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2tree018c9d0e7c19459b1464c1a92cafb6f9081b3364targetblank018c9d0a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2tree537eb864d84cd637428c557ae09b9fe02e6aec8ftargetblank537eb86a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -531,7 +531,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/018c9d0e7c19459b1464c1a92cafb6f9081b3364" target="_blank">018c9d0</a>.
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/537eb864d84cd637428c557ae09b9fe02e6aec8f" target="_blank">537eb86</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -593,6 +593,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/64c5c40f6ea3a28447cda488563bca60266c0973/analysis/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd" target="_blank">64c5c40</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Epayne-hub/Myocarditis_v2/64c5c40f6ea3a28447cda488563bca60266c0973/docs/Immpath_PBMCs_scRNAseq_BMP_Receptors.html" target="_blank">64c5c40</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+<td>
+update
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -718,15 +752,6 @@ FALSE
 </div>
 <div id="marker-genes-for-annotation" class="section level2">
 <h2>Marker genes for annotation</h2>
-<pre class="r"><code>genes &lt;- data.frame(gene=rownames(seuratM)) %&gt;%
-mutate(geneID=gsub(&quot;^.*\\.&quot;, &quot;&quot;, gene))
-
-
-
-genesPlot &lt;- data.frame(gene= c(&quot;CD3D&quot;, &quot;CD3E&quot;, &quot;CD3G&quot;, &quot;RORA&quot;, &quot;CD69&quot;, &quot;CD4&quot;, &quot;IL7R&quot;, &quot;FOS&quot;, &quot;LTB&quot;, &quot;SELL&quot;,  &quot;GREM2&quot;, &quot;FOXP3&quot;, &quot;GATA3&quot;,   &quot;ICOS&quot;, &quot;CTLA4&quot;, &quot;CD40LG&quot;, &quot;TRDV1&quot;, &quot;IFNG&quot;, &quot;CD44&quot;,   &quot;CXCR3&quot;, &quot;PDCD1&quot;, &quot;TRAV2&quot;, &quot;CD8A&quot;, &quot;CD8B&quot;,   &quot;CD38&quot;,&quot;KIT&quot;, &quot;KLRG1&quot;, &quot;GZMB&quot;, &quot;TBX21&quot;, &quot;TOP2A&quot;, &quot;KLRB1&quot;, &quot;NCAM1&quot;, &quot;KLRD1&quot;, &quot;TRGC1&quot;,  &quot;FCGR3A&quot;, &quot;TRGC2&quot;,&quot;SLC4A10&quot;, &quot;CCR6&quot;, &quot;RORC&quot;, &quot;LY9&quot;, &quot;CCR7&quot;,  &quot;MS4A1&quot;, &quot;HLA-DQB1&quot;, &quot;CD79A&quot;, &quot;CD79B&quot;, &quot;CD19&quot;,  &quot;MKI67&quot;, &quot;IGHM&quot;, &quot;JCHAIN&quot;, &quot;TREM1&quot;,&quot;MCTP1&quot;, &quot;CD14&quot;, &quot;CSF1R&quot;, &quot;CSF3R&quot;, &quot;AZU&quot;, &quot;S100A8&quot;, &quot;S100A9&quot;, &quot;CD163&quot;,  &quot;SIGLEC1&quot;, &quot;STAB1&quot;, &quot;GREM1&quot;, &quot;CLEC9A&quot;, &quot;IGAM&quot;, &quot;ITGAX&quot;,   &quot;CLEC12A&quot;, &quot;LYZ&quot;,  &quot;CD68&quot;,&quot;CCR2&quot;, &quot;APOE&quot;, &quot;CXCL10&quot;, &quot;TLR7&quot;, &quot;IRF7&quot;, &quot;LILRA4&quot;,  &quot;CLEC4C&quot;, &quot;IL3RA&quot;))
-
-
-avgHeatmap(seuratM, selGenes = genesPlot)</code></pre>
 <p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-4-1.png" width="1440" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-4-1">
@@ -779,17 +804,6 @@ Epayne-hub
 </div>
 <div id="heatmap-with-bmp-markers" class="section level2">
 <h2>Heatmap with BMP markers</h2>
-<pre class="r"><code>genes &lt;- data.frame(gene=rownames(seuratM)) %&gt;%
-mutate(geneID=gsub(&quot;^.*\\.&quot;, &quot;&quot;, gene))
-
-
-selGenes &lt;- data.frame(geneID = rev(c(&quot;GREM2&quot;, &quot;GREM1&quot;, &quot;BMP4&quot;,  &quot;BMPR1A&quot;, &quot;BMPR2&quot;, &quot;BMP2K&quot;, &quot;BMP8A&quot;, &quot;BMP1&quot;, &quot;BMP6&quot;, &quot;BMP4&quot;,&quot;BMP7&quot;, &quot;HGF&quot;, &quot;MET&quot;, &quot;ENG&quot;, &quot;BMPER&quot;, &quot;TWSG1&quot;, &quot;ACVR2A&quot;, &quot;NOG&quot;, &quot;CHRD&quot;, &quot;FGF2&quot;, &quot;FST&quot;, &quot;TGFBR3&quot;, &quot;TGFB1&quot;, &quot;TGFBR2&quot;, &quot;SHH&quot;, &quot;RUNX2&quot;, &quot;IFNG&quot;, &quot;TNF&quot;, &quot;ITGB1&quot;,&quot;IL10&quot;))) %&gt;%
-left_join(., genes, by = &quot;geneID&quot;)%&gt;%
-filter(gene != &quot;ENSG00000232995.RGS5&quot;)
-
-Idents (seuratM) &lt;- seuratM$clusterName
-
-avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName, show_significance = T, p_adjust_method = &quot;BH&quot;)</code></pre>
 <p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-5-1.png" width="960" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-5-1">
@@ -2779,7 +2793,7 @@ loaded via a namespace (and not attached):
 [268] gplots_3.2.0             pcaMethods_1.98.0        locfit_1.5-9.12         
 [271] otel_0.2.0               jsonlite_2.0.0           GetoptLong_1.0.5        </code></pre>
 <pre class="r"><code>date()</code></pre>
-<pre><code>[1] &quot;Wed Nov 19 09:52:14 2025&quot;</code></pre>
+<pre><code>[1] &quot;Wed Nov 19 11:51:13 2025&quot;</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
