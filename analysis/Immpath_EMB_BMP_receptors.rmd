@@ -176,6 +176,7 @@ avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName)
 
 
 ```{r, fig.width = 10, fig.height = 8}
+
 genes <- data.frame(gene=rownames(seuratM)) %>%
 mutate(geneID=gsub("^.*\\.", "", gene))
 

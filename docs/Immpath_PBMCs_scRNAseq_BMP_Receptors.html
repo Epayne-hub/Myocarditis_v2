@@ -361,7 +361,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -372,8 +372,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -386,9 +386,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Myocarditis_v2/</code> <span
@@ -411,21 +411,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -516,15 +513,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2treee5f638db4a0904bb4a942d4c5de80acfed46d036targetblanke5f638da">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2tree018c9d0e7c19459b1464c1a92cafb6f9081b3364targetblank018c9d0a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/e5f638db4a0904bb4a942d4c5de80acfed46d036" target="_blank">e5f638d</a>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/018c9d0e7c19459b1464c1a92cafb6f9081b3364" target="_blank">018c9d0</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2treee5f638db4a0904bb4a942d4c5de80acfed46d036targetblanke5f638da"
+id="strongRepositoryversionstrongahrefhttpsgithubcomEpaynehubMyocarditisv2tree018c9d0e7c19459b1464c1a92cafb6f9081b3364targetblank018c9d0a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -534,7 +531,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/e5f638db4a0904bb4a942d4c5de80acfed46d036" target="_blank">e5f638d</a>.
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/tree/018c9d0e7c19459b1464c1a92cafb6f9081b3364" target="_blank">018c9d0</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -551,11 +548,6 @@ were generated:
 Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    R/
-    Ignored:    analysis/site_libs/
-
-Unstaged changes:
-    Modified:   analysis/Immpath_EMB_BMP_receptors.rmd
-    Modified:   analysis/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd
 
 </code></pre>
 <p>
@@ -601,6 +593,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/analysis/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+<td>
+figure size changed
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Epayne-hub/Myocarditis_v2/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/Immpath_PBMCs_scRNAseq_BMP_Receptors.html" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+<td>
+figure size changed
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -726,6 +752,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-4-1.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-4-1.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -754,6 +791,43 @@ Idents (seuratM) &lt;- seuratM$clusterName
 
 avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName, show_significance = T, p_adjust_method = &quot;BH&quot;)</code></pre>
 <p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-5-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-5-1">
+Past versions of unnamed-chunk-5-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-5-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-5-1.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>table(seuratM$sample, seuratM$clusterName)</code></pre>
 <pre><code>                            
                              CD4+ Th Tregs CD40L+ Tm CD8+ Tcell  CTL yd Tcells MAIT CD56hi NK
@@ -810,6 +884,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-1.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-1.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -846,6 +931,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-2.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-2.png" target="_blank">c6a4e1e</a>
@@ -886,6 +982,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-3.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-3.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -922,6 +1029,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-4.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-4.png" target="_blank">c6a4e1e</a>
@@ -962,6 +1080,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-5.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-5.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -998,6 +1127,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-6.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-6.png" target="_blank">c6a4e1e</a>
@@ -1038,6 +1178,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-7.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-7.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -1074,6 +1225,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-8.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-8.png" target="_blank">c6a4e1e</a>
@@ -1114,6 +1276,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-9.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-9.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -1150,6 +1323,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-10.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-10.png" target="_blank">c6a4e1e</a>
@@ -1190,6 +1374,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-11.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-11.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -1226,6 +1421,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-12.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-12.png" target="_blank">c6a4e1e</a>
@@ -1266,6 +1472,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-13.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-13.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -1302,6 +1519,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-14.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-14.png" target="_blank">c6a4e1e</a>
@@ -1342,6 +1570,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-15.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-15.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -1380,6 +1619,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-16.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/c6a4e1e0002b4aaa734611a5cc119854117894ee/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-16.png" target="_blank">c6a4e1e</a>
 </td>
 <td>
@@ -1393,13 +1643,999 @@ Epayne-hub
 </table>
 </div>
 </div>
-<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-17.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-18.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-19.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-20.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-21.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-22.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-23.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-24.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-25.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-26.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-17.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-17">
+Past versions of unnamed-chunk-7-17.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-17" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-17.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-18.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-18">
+Past versions of unnamed-chunk-7-18.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-18" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-18.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-19.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-19">
+Past versions of unnamed-chunk-7-19.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-19" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-19.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-20.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-20">
+Past versions of unnamed-chunk-7-20.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-20" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-20.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-21.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-21">
+Past versions of unnamed-chunk-7-21.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-21" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-21.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-22.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-22">
+Past versions of unnamed-chunk-7-22.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-22" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-22.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-23.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-23">
+Past versions of unnamed-chunk-7-23.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-23" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-23.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-24.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-24">
+Past versions of unnamed-chunk-7-24.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-24" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-24.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-25.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-25">
+Past versions of unnamed-chunk-7-25.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-25" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-25.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-26.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-26">
+Past versions of unnamed-chunk-7-26.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-7-26" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-7-26.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>#dev.off()</code></pre>
 </div>
 <div id="feature-plots" class="section level2">
 <h2>Feature Plots</h2>
 <pre><code>[1] &quot;ENSG00000125378.BMP4&quot;</code></pre>
-<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-2.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-3.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-4.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-5.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-6.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-7.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-8.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-9.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-10.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-11.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-12.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-13.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-14.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-15.png" width="672" style="display: block; margin: auto;" /><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-16.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-1">
+Past versions of unnamed-chunk-8-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-1.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-2">
+Past versions of unnamed-chunk-8-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-2.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-3">
+Past versions of unnamed-chunk-8-3.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-3" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-3.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-4.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-4">
+Past versions of unnamed-chunk-8-4.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-4" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-4.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-5.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-5">
+Past versions of unnamed-chunk-8-5.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-5" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-5.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-6.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-6">
+Past versions of unnamed-chunk-8-6.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-6" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-6.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-7.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-7">
+Past versions of unnamed-chunk-8-7.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-7" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-7.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-8.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-8">
+Past versions of unnamed-chunk-8-8.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-8" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-8.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-9.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-9">
+Past versions of unnamed-chunk-8-9.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-9" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-9.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-10.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-10">
+Past versions of unnamed-chunk-8-10.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-10" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-10.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-11.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-11">
+Past versions of unnamed-chunk-8-11.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-11" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-11.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-12.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-12">
+Past versions of unnamed-chunk-8-12.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-12" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-12.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-13.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-13">
+Past versions of unnamed-chunk-8-13.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-13" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-13.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-14.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-14">
+Past versions of unnamed-chunk-8-14.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-14" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-14.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-15.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-15">
+Past versions of unnamed-chunk-8-15.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-15" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-15.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-16.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-16">
+Past versions of unnamed-chunk-8-16.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-16" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/Epayne-hub/Myocarditis_v2/blob/018c9d0e7c19459b1464c1a92cafb6f9081b3364/docs/figure/Immpath_PBMCs_scRNAseq_BMP_Receptors.Rmd/unnamed-chunk-8-16.png" target="_blank">018c9d0</a>
+</td>
+<td>
+Epayne-hub
+</td>
+<td>
+2025-11-19
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>table(seuratM$clusterName)</code></pre>
 <pre><code>
                CD4+ Th                  Tregs              CD40L+ Tm             CD8+ Tcell 
@@ -1543,7 +2779,7 @@ loaded via a namespace (and not attached):
 [268] gplots_3.2.0             pcaMethods_1.98.0        locfit_1.5-9.12         
 [271] otel_0.2.0               jsonlite_2.0.0           GetoptLong_1.0.5        </code></pre>
 <pre class="r"><code>date()</code></pre>
-<pre><code>[1] &quot;Wed Nov 19 09:38:14 2025&quot;</code></pre>
+<pre><code>[1] &quot;Wed Nov 19 09:52:14 2025&quot;</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">

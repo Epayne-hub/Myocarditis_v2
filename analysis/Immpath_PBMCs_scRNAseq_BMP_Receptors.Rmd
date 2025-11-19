@@ -152,7 +152,8 @@ table(is.na(seuratM$clusterName))
 ```
 
 ## Marker genes for annotation
-```{r, fig.width = 15, fig.height = 12}
+```{r, echo = F, fig.width = 15, fig.height = 12}
+
 genes <- data.frame(gene=rownames(seuratM)) %>%
 mutate(geneID=gsub("^.*\\.", "", gene))
 
@@ -168,7 +169,7 @@ avgHeatmap(seuratM, selGenes = genesPlot)
 
 
 ## Heatmap with BMP markers
-```{r, fig.width = 10, fig.height = 8}
+```{r, echo = F, fig.width = 10, fig.height = 8}
 genes <- data.frame(gene=rownames(seuratM)) %>%
 mutate(geneID=gsub("^.*\\.", "", gene))
 
