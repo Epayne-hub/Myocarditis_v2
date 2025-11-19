@@ -1,0 +1,330 @@
+99i.---
+title: "Acute Myocarditis vs. Donor Heart GREM2 Expression"
+author: "EP"
+date: "2025-10-06"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+```{r setup, include = FALSE, fig.path = "custom/path", warning = FALSE, message = FALSE}
+
+options (width = 100)
+knitr::opts_chunk$set(warning = FALSE, echo = TRUE, message = FALSE, dev = c("png", "pdf"))
+seed <- 1234
+
+```
+
+
+
+
+```{r load libraries, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+suppressPackageStartupMessages({
+  library(Seurat)
+  library(ggpubr)
+  library(pheatmap)
+  library(SingleCellExperiment)
+  library(dplyr)
+  library(tidyverse)
+  library(viridis)
+  library(muscat)
+  library(circlize)
+  library(destiny)
+  library(scater)
+  library(metap)
+  library(multtest)
+  library(clusterProfiler)
+  library(org.Hs.eg.db)
+  library(msigdbr)
+  library(enrichplot)
+  library(DOSE)
+  library(grid)
+  library(gridExtra)
+  library(ggupset)
+  library(VennDiagram)
+  library(NCmisc)
+  library(RColorBrewer)
+  library(EnhancedVolcano)
+  library(textshaping)
+  library(wordcloud)
+  library(pathview)
+  library(workflowr)
+  library(stringr)
+  library(ImmunoLogic)
+  library(tidyr)      
+  library(ggplot2)
+  library(purrr)
+  library(scales)
+})
+
+#library(devtools)
+#devtools::install_github("Ludewig-Lab/ImmunoLogic")
+
+```
+
+
+
+```{r, echo = FALSE}
+
+
+seuratM <- readRDS("~/Documents/01 Projects/00 snRNAseq/00 Myocarditis/data/Merged/seuratAM_noDoublets_annotated_cleaned_21.09.2025_v3.rds")
+
+table(seuratM$dataset)
+
+```
+
+```{r}
+table(seuratM$sample)
+```
+
+
+```{r, echo = T}
+table(seuratM$orig.ident)
+table(seuratM$clusterName, seuratM$pat_sub)
+```
+
+
+
+```{r, echo = FALSE}
+Idents(seuratM) <- seuratM$RNA_snn_res.0.25
+DimPlot(seuratM, reduction = "umap", label = TRUE, repel = TRUE)
+
+
+seuratM$clusterName <- "clusterName"
+Idents(seuratM) <- seuratM$clusterName
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "0" )] <- "Fb1"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "1" )] <- "BEC1"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "2" )] <- "PeriFb"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "3" )] <- "CM"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "4" )] <- "TRM"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "5" )] <- "Lymphocytes"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "6" )] <- "inflMph"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "7" )] <- "VSMC"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "8" )] <- "BEC2"
+#seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "9" )] <- "CM3"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "10" )] <- "NC2"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "11" )] <- "NC1"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "12" )] <- "TRM3"
+seuratM$clusterName[which(seuratM$RNA_snn_res.0.25 %in% "13" )] <- "Fb2"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "14" )] <- "Int"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "15" )] <- "CM2"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "16" )] <- "Fb3"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "17" )] <- "VSMC2"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "18" )] <- "BEC3"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "19" )] <- "LECs"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "20" )] <- "TRM2"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "21" )] <- "PeriFb2"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "22" )] <- "Adipocytes"
+#seuratAM$clusterName[which(seuratAM$RNA_snn_res.0.25 %in% "23" )] <- "Mast cells"
+
+## BEC3 high ICAM1, in NC2 high neurosynaptic monoaminergic activation
+
+#colclusterName <- c("#f4a582", "#D53E4F", "#e34a33", "#FEE08B","#feb24c", "#fff7bc","#e5f5e0","#3288BD", "#1c9099", "#253494", "#a8ddb5", "#01665e", "#66C2A5","#c7eae5", "#67001f", "#355C7D","#54278f", "#ece2f0", "#fa9fb5","#a6bddb", "#BEAED4","#B45B5C","#fde0dd", "#dd1c77")
+
+#"#BEAED4"                   
+#names(colclusterName) <- c("CM", "CM2", "CM3", "Fb1","Fb2","Fb3", "Int", "PeriFb", "PeriFb2", "VSMC", "VSMC2","BEC1","BEC2", "BEC3", "LECs", "NC1", "NC2", "Adipocytes", "Mast cells", "TRM", "TRM2", "TRM3", "inflMph","Lymphocytes")
+```
+
+
+```{r, echo = FALSE}
+colpat_sub<- c("#dfc27d","#BE3144")
+
+names(colpat_sub) <- c("DonorHeart", "AM")
+
+seuratM$pat_sub<- factor(seuratM$pat_sub, levels=c("DonorHeart", "AM"))
+
+#seuratAM$clusterName <- factor(seuratAM$clusterName, levels=c("CM", "CM2", "CM3", "Fb1","Fb2","Fb3", "Int", "PeriFb", "PeriFb2", "VSMC", "VSMC2","BEC1","BEC2", "BEC3", "LECs", "NC1", "NC2", "Adipocytes", "Mast cells", "TRM", "TRM2", "TRM3", "inflMph","Lymphocytes"))
+
+colclusterName <- c("#f4a582", "#FEE08B","#feb24c","#3288BD", "#253494",  "#01665e", "#66C2A5", "#355C7D","#54278f", "#a6bddb", "#fde0dd", "#dd1c77")
+
+names(colclusterName) <- c("CM", "Fb1","Fb2", "PeriFb", "VSMC", "BEC1","BEC2", "NC1", "NC2", "TRM", "inflMph","Lymphocytes")
+
+seuratM$clusterName <- factor(seuratM$clusterName, levels=c("CM", "Fb1","Fb2", "PeriFb", "VSMC", "BEC1","BEC2", "NC1", "NC2", "TRM", "inflMph","Lymphocytes"))
+
+Idents(seuratM) <- seuratM$RNA_snn_res.0.25
+DimPlot(seuratM, reduction = "umap", label = TRUE, repel = TRUE)
+
+Idents(seuratM) <- seuratM$clusterName
+DimPlot(seuratM, reduction = "umap",label = TRUE, repel = TRUE, cols = colclusterName, raster = T)
+
+
+```
+
+
+## Heatmap with marker genes
+```{r, fig.height = 9}
+
+genes <- data.frame(gene=rownames(seuratM)) %>%
+mutate(geneID=gsub("^.*\\.", "", gene))
+
+
+selGenes <- data.frame(geneID = rev(c("TTN", "MYBPC3", "RYR2", "NEBL", "TNNT2", "CMYA5", "COL6A3", "DCN",  "FBN1", "C7", "PDGFRA", "CDH19", "PDGFRB", "BMP4", "GREM1", "GREM2", "ITGA7","RGS5", "NOTCH3", "MYH11", "ACTA2","PECAM1", "VWF", "EGFL7", "POSTN", "ITGA10", "CDH11","CCL21", "FLT4", "NRXN1", "ANK3", "PTPRZ1", "PLIN1", "GPAM", "CD163", "LYVE1", "MRC1", "SIGLEC1", "STAB1", "CSF1R","MERTK", "HLA-DQB1","CCR2", "CD79B","JCHAIN", "IL7R", "CD3E", "PTPRC", "CD2", "KIT"))) %>%
+left_join(., genes, by = "geneID")%>%
+filter(gene != "ENSG00000232995.RGS5")
+
+Idents (seuratM) <- seuratM$clusterName
+
+avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName)
+
+
+```
+
+
+
+
+```{r, fig.width = 10}
+genes <- data.frame(gene=rownames(seuratM)) %>%
+mutate(geneID=gsub("^.*\\.", "", gene))
+
+
+selGenes <- data.frame(geneID = rev(c("GREM2", "GREM1", "BMP4",  "BMPR1A", "BMPR2", "BMP2K", "BMP8A", "BMP1", "BMP6", "BMP4","BMP7", "HGF", "MET", "ENG", "BMPER", "TWSG1", "ACVR2A", "NOG", "CHRD", "FGF2", "FST", "TGFBR3", "TGFB1", "TGFBR2", "SHH", "RUNX2", "INFG"))) %>%
+left_join(., genes, by = "geneID")%>%
+filter(gene != "ENSG00000232995.RGS5")
+
+Idents (seuratM) <- seuratM$clusterName
+
+avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName, show_significance = T, p_adjust_method = "BH", condition_by = "pat_sub", condition_colors = colpat_sub)
+```
+
+## functional pathways BMP
+```{r, fig.width = 15}
+
+## functional pathways
+
+genes <- data.frame(gene=rownames(seuratM)) %>%
+mutate(geneID=gsub("^.*\\.", "", gene))
+
+
+selGenes <- data.frame(geneID = rev(c("GREM2", "GREM1", "BMP4",  "BMPR1A", "BMPR2", "BMP2K", "BMP8A", "BMP1", "BMP6", "BMP4","BMP7", "HGF", "MET", "ENG", "BMPER", "TWSG1", "ACVR2A", "NOG", "CHRD", "FGF2", "FST", "TGFBR3", "TGFB1", "TGFBR2", "SHH", "RUNX2", "INFG", "STAT1", "GAS6", "LYVE1", "CXL9", "CXCL10", "IL6", "IFNG", "CD28","ICOS", "CD40LG","IL17A", "CXCR3", "CCR6","RORC", "TBX21",  "FCGR3A","FOXP3", "CD69","IL1B", "TNF", "ITGB1","IL10", "CXCR8", "IFNA1", "MYD88", "TGFB2",  "CD163","CD3E","CD8", "CD4", "IL23R"))) %>%
+left_join(., genes, by = "geneID")%>%
+filter(gene != "ENSG00000232995.RGS5")
+
+Idents (seuratM) <- seuratM$clusterName
+
+avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName, show_significance = T, p_adjust_method = "BH", condition_by = "pat_sub", condition_colors = colpat_sub)
+
+```
+
+
+
+```{r}
+table(seuratM$sample, seuratM$clusterName)
+```
+
+
+## Violin Plots by cluster 
+```{r}
+genes <- data.frame(gene=rownames(seuratM)) %>% 
+  mutate(geneID=gsub("^.*\\.", "", gene))
+
+selGenes <- data.frame(geneID=c("GREM2", "GREM1", "BMP4", "BMPR1A", "BMPR2", "BMP2K", "BMP8A", "BMP1", "BMP6", "BMP4","BMP7", "HGF", "MET", "ENG", "BMPER", "TWSG1", "ACVR2A", "NOG", "CHRD", "FGF2", "FST", "TGFBR3", "TGFB1", "TGFBR2", "SHH", "RUNX2")) %>% 
+  left_join(., genes, by="geneID")
+
+Idents(seuratM) <- seuratM$clusterName
+#pdf("violin_plots_EMB_allcells_Immpath_GREM_BMP_receptors.pdf", width = 8, height = 6)
+pList <- sapply(selGenes$gene, function(x){
+  p <- VlnPlot( object = seuratM, features = x, pt.size = 0.1, cols=colclusterName)
+  plot(p)
+})
+#dev.off()
+
+
+
+```
+## Violin Plots by cluster and condition
+```{r}
+genes <- data.frame(gene=rownames(seuratM)) %>% 
+  mutate(geneID=gsub("^.*\\.", "", gene))
+
+selGenes <- data.frame(geneID=c("GREM2", "GREM1", "BMP4",  "BMPR1A", "BMPR2", "BMP2K", "BMP8A", "BMP1", "BMP6", "BMP4","BMP7", "HGF", "MET", "ENG", "BMPER", "TWSG1", "ACVR2A", "NOG", "CHRD", "FGF2", "FST", "TGFBR3", "TGFB1", "TGFBR2", "SHH", "RUNX2")) %>% 
+  left_join(., genes, by="geneID")
+
+Idents(seuratM) <- seuratM$clusterName
+#pdf("violin_plots_EMB_allcells_Immpath_GREM_BMP_receptors.pdf", width = 8, height = 6)
+pList <- sapply(selGenes$gene, function(x){
+  p <- VlnPlot( object = seuratM, features = x, pt.size = 0.1, cols=colpat_sub, split.by = "pat_sub")
+  plot(p)
+})
+#dev.off()
+```
+
+## Violin Plots by condition
+```{r}
+genes <- data.frame(gene=rownames(seuratM)) %>% 
+  mutate(geneID=gsub("^.*\\.", "", gene))
+
+selGenes <- data.frame(geneID=c("GREM2", "GREM1", "BMP2", "BMP4",  "BMPR1A", "BMPR2", "BMP2K", "BMP8A", "BMP1", "BMP6", "BMP4","BMP7", "HGF", "MET", "ENG", "BMPER", "TWSG1", "ACVR2A", "NOG", "CHRD", "FGF2", "FST", "TGFBR3", "TGFB1", "TGFBR2", "SHH", "RUNX2")) %>% 
+  left_join(., genes, by="geneID")
+
+Idents(seuratM) <- seuratM$pat_sub
+#pdf("violin_plots_EMB_allcells_Immpath_GREM_BMP_receptors.pdf", width = 8, height = 6)
+pList <- sapply(selGenes$gene, function(x){
+  p <- VlnPlot( object = seuratM, features = x, pt.size = 0.1, cols=colpat_sub)
+  plot(p)
+})
+#dev.off()
+
+
+```
+
+
+
+## Feature Plots GREM1, GREM2, BMP4
+```{r, warning = FALSE, echo = F}
+
+get_full_gene_name <- function(gene, obj){
+  return(grep(gene,rownames(obj), value =TRUE))
+}
+get_full_gene_name("BMP4",seuratM) 
+
+FeaturePlot(seuratM, features = "ENSG00000125378.BMP4", pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("GREM1",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))#
+FeaturePlot(seuratM, features = get_full_gene_name("GREM2",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("BMPR1A",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("BMPR2",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("BMPER",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))#
+FeaturePlot(seuratM, features = get_full_gene_name("BMP2K",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("ENG",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("ACVR2A",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("RUNX2",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))#
+FeaturePlot(seuratM, features = get_full_gene_name("TWSG1",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+#FeaturePlot(seuratM, features = get_full_gene_name("NOG",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("CHRD",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("TGFBR3",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))#
+FeaturePlot(seuratM, features = get_full_gene_name("TGFB1",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("TGFBR2",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+FeaturePlot(seuratM, features = get_full_gene_name("BMP2",seuratM) , pt.size = 2, cols = c("lightgrey", "#BE3144"))
+
+```
+
+
+
+```{r}
+table(seuratM$clusterName)
+```
+
+```{r, include = F}
+#saveRDS(seuratM, file="~/Documents/01 Projects/00 snRNAseq/00 Myocarditis/data/Merged/seuratAM_noDoublets_annotated_cleaned_21.09.2025_v3.rds")
+
+```
+
+
+
+```{r, echo = T}
+table(seuratM$patient)
+```
+
+
+```{r, echo = T}
+table(seuratM$sample)
+
+```
+
+```{r}
+sessionInfo()
+date()
+```
+
