@@ -78,7 +78,7 @@ suppressPackageStartupMessages({
 
 #seuratM <- readRDS("~/Documents/Github/GREM2_Expression/data/Immpath/Immpath_PBMCs_GREM2_onlyNonstim_clusterN#ame_11.10.2025.rds")
 
-seuratM <- readRDS("~/Documents/Github/GREM2_Expression/data/Immpath/Immpath_PBMCs_GREM2_onlyNonstim_clusterName_11.10.2025.rds")
+seuratM <- readRDS("~/Documents/GREM2_Expression/data/Immpath/Immpath_PBMCs_GREM2_onlyNonstim_clusterName_11.10.2025.rds")
 
 
 #table(seuratM$dataset)
@@ -151,9 +151,24 @@ table(is.na(seuratM$clusterName))
 
 ```
 
+## Marker genes for annotation
+```{r, fig.width = 15, fig.height = 12}
+genes <- data.frame(gene=rownames(seuratM)) %>%
+mutate(geneID=gsub("^.*\\.", "", gene))
+
+
+
+genesPlot <- data.frame(gene= c("CD3D", "CD3E", "CD3G", "RORA", "CD69", "CD4", "IL7R", "FOS", "LTB", "SELL",  "GREM2", "FOXP3", "GATA3",   "ICOS", "CTLA4", "CD40LG", "TRDV1", "IFNG", "CD44",   "CXCR3", "PDCD1", "TRAV2", "CD8A", "CD8B",   "CD38","KIT", "KLRG1", "GZMB", "TBX21", "TOP2A", "KLRB1", "NCAM1", "KLRD1", "TRGC1",  "FCGR3A", "TRGC2","SLC4A10", "CCR6", "RORC", "LY9", "CCR7",  "MS4A1", "HLA-DQB1", "CD79A", "CD79B", "CD19",  "MKI67", "IGHM", "JCHAIN", "TREM1","MCTP1", "CD14", "CSF1R", "CSF3R", "AZU", "S100A8", "S100A9", "CD163",  "SIGLEC1", "STAB1", "GREM1", "CLEC9A", "IGAM", "ITGAX",   "CLEC12A", "LYZ",  "CD68","CCR2", "APOE", "CXCL10", "TLR7", "IRF7", "LILRA4",  "CLEC4C", "IL3RA"))
+
+
+avgHeatmap(seuratM, selGenes = genesPlot)
+
+```
+
+
 
 ## Heatmap with BMP markers
-```{r, fig.height = 10}
+```{r, fig.width = 10, fig.height = 8}
 genes <- data.frame(gene=rownames(seuratM)) %>%
 mutate(geneID=gsub("^.*\\.", "", gene))
 

@@ -175,7 +175,7 @@ avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName)
 
 
 
-```{r, fig.width = 10}
+```{r, fig.width = 10, fig.height = 8}
 genes <- data.frame(gene=rownames(seuratM)) %>%
 mutate(geneID=gsub("^.*\\.", "", gene))
 
@@ -190,7 +190,7 @@ avgHeatmap(seuratM, selGenes = selGenes, annotation_colors = colclusterName, sho
 ```
 
 ## functional pathways BMP
-```{r, fig.width = 15}
+```{r, fig.width = 15, fig.height = 12}
 
 ## functional pathways
 
